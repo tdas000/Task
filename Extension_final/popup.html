@@ -1,0 +1,56 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Data Table</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: none; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+        .container { 
+                     border-radius: 10px;
+                     overflow: hidden; 
+                    }   
+        .alert { color: red; }
+        #gdpr-alert {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4542ea;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        p { margin: 10px 0;padding: 5px;border: 0px solid black;text-indent: 10px }
+
+    </style>
+</head>
+<body class="container">
+    <h2>Data Table</h2>
+    <div >
+        <table id="dataTable">
+            <thead>
+                <!-- Dynamic rows will be inserted here for headers -->
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+        <div>
+            <p id="status"></p>
+            <button id="ClearAlert"> Clear Alerts and Cookies</button>
+            <!-- <button id="ToSPP"> ToS and PP </button> -->
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

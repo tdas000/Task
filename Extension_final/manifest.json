@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Sensitivity-Based Search Customization and Data Minimization ",
+    "description": "Monitors and alerts users about GDPR compliance issues on Google Search.",
+    "version": "1.0",
+    "permissions": [
+      "webRequest",
+      "storage",
+      "activeTab",
+      "scripting",
+      "tabs",
+      "cookies"
+    ],
+    "host_permissions": ["*://www.google.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.google.com/*"],
+        "js": ["content.js", "sensitivesearch.js"]
+      }
+    ],
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon128.png"
+    }
+  }
